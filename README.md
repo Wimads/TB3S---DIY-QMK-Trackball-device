@@ -5,8 +5,8 @@ TB3S = TrackBall 3 Switches (yeah, I ran out of creativity when I got to decidin
 
 The design was intended to use in conjunction with my split QMK keyboard (keycapsss 3W6). I operate the ball with right hand, and use my left hand on keyboard for clicking. I did add 3 buttons to the device, so it is usable as a stand-alone trackball as well; it is however not very ergonomical for that purpose. The design was kept as compact as possible, so it can be placed neatly next to my keyboard (I place it above the right hand side, to use with my fingers).
 
-**BOM - Bill of Materials**
 
+## BOM - Bill of Materials
 You need the following parts for the build:
 * 1x Elite-pi micro controller
 * 1x Tindie PMW3360 pcb
@@ -20,10 +20,12 @@ You need the following parts for the build:
   * TB3S_Housing Top_231130.stl
   * TB3S_Housing Bottom_231130.stl
 
-**3D design**
+
+## 3D design
 The .stl files are all you need if you want to build my design as is. But if you want to edit it to your own preferences, you're welcome to do so! (I'd love to see what you do with it if you decide on that). It was built in OnShape, here is a link to the file:
 
-**Firmware**
+
+## Firmware
 The QMK firmware files included in this repository were based on Ploopy Madromys and Bastardkb Charybdis firmware; all credits for firmware development go to them, I merely cobbled together from both what I needed. Ploopy Madromys was used as a template for the hardware configuration (since its also based on rp2040 and pmw3360). Bastardkb Charybdis firmware was used to implement the same trackball funcitonalities (dragscroll, sniping, etc); so you can use all the same keycodes and configurations for trackball as in bkb Charybdis
 * If you're not familiar with QMK, you might want to read up on that before attempting to build this. Google is your friend.
 * This firmware files in this repository will NOT be maintained, since I am no developer, and not a company - this was merely a hobby project - I have included these files only as a starting point for your own work.
@@ -31,5 +33,6 @@ The QMK firmware files included in this repository were based on Ploopy Madromys
 * You'll have to copy these files into your own QMK fork to get started (there is and will not be a PR to merge this into QMK mainline). Or you could fork my personal QMK_firmware branch, but no guarantees it is in working state on the moment you happen to fork it.
 * The firmware files included in this repository were working on QMK mainline on 10 januari 2024, but there is no guarantee it will remain functional after future QMK updates.
 
-**Wiring**
+
+## Wiring
 I'm too lazy to write down how I've wired it up here. You'll have to dig into the firmware files, or do your own homework.
