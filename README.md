@@ -3,8 +3,17 @@ This is a small DIY trackball device, based around an elite-pi micro controller 
 
 TB3S = TrackBall 3 Switches (yeah, I ran out of creativity when I got to deciding the name :P )
 
+![](https://github.com/Wimads/TB3S/blob/main/images/IMG_20231214_222658_6.jpg)
+
+![](https://github.com/Wimads/TB3S/blob/main/images/IMG_20231214_222613_698.jpg)
+
+![](https://github.com/Wimads/TB3S/blob/main/images/IMG_20231214_222504_925.jpg)
+
+
+
 The design was intended to use in conjunction with my split QMK keyboard (keycapsss 3W6). I operate the ball with right hand, and use my left hand on keyboard for clicking. I did add 3 buttons to the device, so it is usable as a stand-alone trackball as well; it is however not very ergonomical for that purpose. The design was kept as compact as possible, so it can be placed neatly next to my keyboard (I place it above the right hand side, to use with my fingers).
 
+![](https://github.com/Wimads/TB3S/blob/main/images/PXL_20240108_225531608.jpg)
 
 ## BOM - Bill of Materials
 You need the following parts for the build:
@@ -20,9 +29,17 @@ You need the following parts for the build:
   * TB3S_Housing Top_231130.stl
   * TB3S_Housing Bottom_231130.stl
 
+![](https://github.com/Wimads/TB3S/blob/main/images/IMG_20231214_184359_805.jpg)
+
 
 ## 3D design
-The .stl files are all you need if you want to build my design as is. But if you want to edit it to your own preferences, you're welcome to do so! (I'd love to see what you do with it if you decide on that). It was built in OnShape, here is a link to the file:
+The .stl files are all you need if you want to build my design as is. But if you want to edit it to your own preferences, you're welcome to do so! (I'd love to see what you do with it if you decide on that). It was built in OnShape, here is a link to the file: 
+
+https://cad.onshape.com/documents/4dc76c0b4d4b1410bbc67964/w/e2a4b3a2241815c20a369661/e/7d96c48f304fe2d16c76f0d2?renderMode=1&uiState=659f06fb2e15421497c812e7
+
+![](https://github.com/Wimads/TB3S/blob/main/images/Screenshot%202024-01-10%20220355.png)
+
+![](https://github.com/Wimads/TB3S/blob/main/images/Screenshot%202024-01-10%20215835.png)
 
 
 ## Firmware
@@ -36,3 +53,5 @@ The QMK firmware files included in this repository were based on Ploopy Madromys
 
 ## Wiring
 I'm too lazy to write down how I've wired it up here. You'll have to dig into the firmware files, or do your own homework.
+
+![](https://github.com/Wimads/TB3S/blob/main/images/IMG_20231214_210434_575.jpg)
