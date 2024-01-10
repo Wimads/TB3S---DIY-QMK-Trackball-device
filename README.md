@@ -26,9 +26,9 @@ You need the following parts for the build:
 * 2x heat set insert, M3x5x5mm
 * 2x countersunk screws, M3x10mm
 * Some wiring and solder
-* 3D printed housing (designed for MJF, so not designed with the limitations of FDM printing in mind). I ordered from JLCPCB.
-  * TB3S_Housing Top_231130.stl
-  * TB3S_Housing Bottom_231130.stl
+* 3D printed housing (designed for MJF, not possible in FDM)
+  * TB3S_Housing Top_231214.stl
+  * TB3S_Housing Bottom_231214.stl
 
 ![](https://github.com/Wimads/TB3S/blob/main/images/IMG_20231214_184359_805.jpg)
 
