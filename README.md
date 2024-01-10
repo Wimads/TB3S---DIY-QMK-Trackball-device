@@ -23,7 +23,8 @@ You need the following parts for the build:
 * 3x 3mm ceramic balls (Zirconium Oxide or Silicon Nitride are the best options); aliexpress is your best bet.
 * 3x Kailh Choc switch
 * 3x Choc keycap (compatible with choc spacing: ~18x17mm)
-* 2x heat set insert, M3 5x5mm
+* 2x heat set insert, M3x5x5mm
+* 2x countersunk screws, M3x10mm
 * Some wiring and solder
 * 3D printed housing (designed for MJF, so not designed with the limitations of FDM printing in mind). I ordered from JLCPCB.
   * TB3S_Housing Top_231130.stl
