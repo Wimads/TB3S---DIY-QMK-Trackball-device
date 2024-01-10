@@ -1,10 +1,12 @@
 # TB3S
 This is a small DIY trackball device, based around an elite-pi micro controller and a PMW3360 sensor, running on QMK firmware. 
+
 TB3S = TrackBall 3 Switches (yeah, I ran out of creativity when I got to deciding the name :P )
 
 The design was intended to use in conjunction with my split QMK keyboard (keycapsss 3W6). I operate the ball with right hand, and use my left hand on keyboard for clicking. I did add 3 buttons to the device, so it is usable as a stand-alone trackball as well; it is however not very ergonomical for that purpose. The design was kept as compact as possible, so it can be placed neatly next to my keyboard (I place it above the right hand side, to use with my fingers).
 
 **BOM - Bill of Materials**
+
 You need the following parts for the build:
 * 1x Elite-pi micro controller
 * 1x Tindie PMW3360 pcb
