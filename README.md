@@ -27,7 +27,7 @@ You need the following parts for the build:
 * 2x countersunk screws, M3x10mm
 * Some wiring and solder
 * Some cellrubber tape (epdm or neoprene) for anti slip.
-* 3D printed housing (designed for MJF, not possible in FDM)
+* 3D printed housing (designed for MJF, not recommended for FDM printing)
   * TB3S_Housing Top_231214.stl
   * TB3S_Housing Bottom_231214.stl
 
