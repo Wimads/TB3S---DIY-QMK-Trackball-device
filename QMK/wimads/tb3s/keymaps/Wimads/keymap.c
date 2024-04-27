@@ -14,10 +14,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+////TO DO////
+/*
+ */
 #include QMK_KEYBOARD_H
 
+////LAYER & KEYCODE DEFINITIONS////
 enum layers {
-   _DEF,
+    _DEF, // default
+    _QMK, // QK boot, eeprom reset, dpi up/down
 };
 
 #define LMB KC_BTN1
@@ -26,48 +31,59 @@ enum layers {
 #define BCK KC_BTN4
 #define FWD KC_BTN5
 
-#define SCR_SNI LT(10, KC_NO) //dragscroll-sniping, further defined in macro
+#define RST_QMK LT(_QMK, QK_BOOT)
+#define DRTGSCR LT(10, KC_NO) // drag-toggle-scroll >>further defined in macro
 
 #include "gboards/g/keymap_combo.h"
 
+// clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [_DEF] = LAYOUT(RMB,   SCR_SNI, LMB)
+    [_DEF] = LAYOUT(RMB, DRTGSCR, LMB),
+    [_QMK] = LAYOUT(EE_CLR, DPI_RMOD, DPI_MOD)
 };
+// clang-format on
 
+////CUSTOM KEY BEHAVIOURS////
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
-    static bool dragscroll = false; //dragscroll active or not
-    static bool drag_toggle = false; //dragscroll was activated via toggle or not
-    static bool sniping = false;
-    switch(keycode) {
-        case SCR_SNI: //dragscroll / drag_toggle / sniping - all in one key!
-            if (record->event.pressed && record->tap.count) { //on tap
-                //toggle dragscroll on/off
-                dragscroll = !dragscroll; //invert dragscroll state
-                charybdis_set_pointer_dragscroll_enabled(dragscroll); //set dragscroll
-                drag_toggle = dragscroll; //set drag_toggle state
-            } else if(record->event.pressed && !drag_toggle) { //on hold && not toggled
-                //turn dragscroll on while held
+    static bool dragscroll  = false; // dragscroll active or not
+    static bool drag_toggle = false; // dragscroll was activated via toggle or not
+    // other macros:
+    switch (keycode) {
+        case RST_QMK:
+            if (record->event.pressed && record->tap.count) {
+                reset_keyboard();
+                return false;
+            }
+            return true;
+
+        case DRTGSCR: // drags-toggle-scroll
+            if (record->event.pressed && record->tap.count) {
+                // on tap: toggle dragscroll on/off
+                dragscroll = !dragscroll;                             // invert dragscroll state
+                charybdis_set_pointer_dragscroll_enabled(dragscroll); // set dragscroll
+                drag_toggle = dragscroll;                             // set drag_toggle state
+            } else if (record->event.pressed && !drag_toggle) {
+                // on hold and not toggled: turn dragscroll on
                 dragscroll = true;
                 charybdis_set_pointer_dragscroll_enabled(dragscroll);
-            } else if(record->event.pressed && drag_toggle) { //on hold && toggled (ie. tap once and then hold)
-                //turn dragscroll off, and turn sniping on
+            } else if (record->event.pressed && drag_toggle) {
+                // on hold and toggled (ie. tap once and then hold): turn drag_toggle off
                 drag_toggle = false;
-                dragscroll = false;
-                sniping = true;
+                dragscroll  = true;
                 charybdis_set_pointer_dragscroll_enabled(dragscroll);
-                charybdis_set_pointer_sniping_enabled(sniping);
-            }else { //on release
-                if(sniping) { //if sniping true, turn off sniping
-                    sniping = false;
-                    charybdis_set_pointer_sniping_enabled(sniping);
-                } else if(!drag_toggle) { //if no drag_toggle, turn off dragscroll
+            } else {
+                // on release:
+                if (!drag_toggle) {
+                    // if not toggled, turn off dragscroll
                     dragscroll = false;
                     charybdis_set_pointer_dragscroll_enabled(dragscroll);
-                } //else do nothing
-            } return false;
+                } // else do nothing
+            }
+            return false;
 
         default:
             return true;
-    }//.switch(keycode)
+
+    } // switch
     return true;
-};
+}; // process_record_user

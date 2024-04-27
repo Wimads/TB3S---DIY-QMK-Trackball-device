@@ -19,3 +19,11 @@
 // combos
 #define COMBO_VARIABLE_LEN
 #define COMBO_TERM 60
+
+#define EECONFIG_USER_DATA_SIZE 20
+
+#define MACCEL_DEBUG // enable debug console
+#undef PRINTF_SUPPORT_DECIMAL_SPECIFIERS
+#define PRINTF_SUPPORT_DECIMAL_SPECIFIERS 1 // enable floats in debug console
+
+#define MACCEL_AFFECTS_DRAGSCROLL // applies accel curve to dragscroll;

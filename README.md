@@ -9,8 +9,6 @@ TB3S = TrackBall 3 Switches (yeah, I ran out of creativity when I got to decidin
 
 ![](https://github.com/Wimads/TB3S/blob/main/images/IMG_20231214_222504_925.jpg)
 
-
-
 The design was intended to use in conjunction with my split QMK keyboard (keycapsss 3W6). I operate the ball with right hand, and use my left hand on keyboard for clicking. I did add 3 buttons to the device, so it is usable as a stand-alone trackball as well; it is however not very ergonomical for that purpose. The design was kept as compact as possible, so it can be placed neatly next to my keyboard (I place it above the right hand side, to use with my fingers).
 
 ![](https://github.com/Wimads/TB3S/blob/main/images/PXL_20240108_225531608.jpg)
@@ -46,11 +44,15 @@ https://cad.onshape.com/documents/4dc76c0b4d4b1410bbc67964/w/e2a4b3a2241815c20a3
 
 ## Firmware
 The QMK firmware files included in this repository were based on Ploopy Madromys and Bastardkb Charybdis firmware; all credits for firmware development go to them, I merely cobbled together from both what I needed. Ploopy Madromys was used as a template for the hardware configuration (since its also based on rp2040 and pmw3360). Bastardkb Charybdis firmware was used to implement the same trackball funcitonalities (dragscroll, sniping, etc); so you can use all the same keycodes and configurations for trackball as in Charybdis.
-* If you're not familiar with QMK, you might want to read up on that before attempting to build this. Google is your friend.
+
+This firmware also implements the [*maccel feature*](https://github.com/finrod09/qmk_userspace_features/tree/main/maccel), a QMK based configurable mouse acceleration feature, which makes the trackball a lot more pleasant to use, and makes a SNIPING mode unnecessary. If you want to use this feature, base your firmware off the `via` keymap folder. If you prefer to not use this feature, you can use the `Wimads` keymap folder as a template.
+
+**Important notes on firmware:**
+* This is not a beginner QMK project. If you're not familiar with QMK, you might want to read up on that before attempting to build this. Google is your friend. 
 * The firmware files in this repository will NOT be maintained, since I am no developer, and not a company - this was merely a hobby project - I have included these files only as a starting point for your own work.
-* As such, there will be NO support from my end. If you need help with QMK, there's plenty of channels (reddit, discord, whatever you fancy).
+* As such, there will be NO support from my end. If you need help with QMK. Though there's plenty of channels for that (reddit, discord, whatever you fancy).
 * You'll have to copy these files into your own QMK fork to get started (there is and will not be a PR to merge this into QMK mainline). Or you could fork my personal QMK_firmware branch, but no guarantees it is in working state on the moment you happen to fork it.
-* The firmware files included in this repository were working on QMK mainline on 10 januari 2024, but there is no guarantee it will remain functional after future QMK updates.
+* The firmware files included in this repository were working on QMK mainline on 27 april 2024, but there is no guarantee it will remain functional after future QMK updates.
 
 
 ## Wiring
