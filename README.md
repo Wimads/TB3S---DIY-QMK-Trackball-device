@@ -9,7 +9,8 @@ TB3S = TrackBall 3 Switches (yeah, I ran out of creativity when I got to decidin
 
 ![](https://github.com/Wimads/TB3S/blob/main/images/IMG_20231214_222504_925.jpg)
 
-The design was intended to use in conjunction with my split QMK keyboard (keycapsss 3W6). I operate the ball with right hand, and use my left hand on keyboard for clicking. I did add 3 buttons to the device, so it is usable as a stand-alone trackball as well; it is however not very ergonomical for that purpose. The design was kept as compact as possible, so it can be placed neatly next to my keyboard (I place it above the right hand side, to use with my fingers).
+The design was intended to use in conjunction with my split QMK keyboard (keycapsss 3W6). I operate the ball with right hand, and use my left hand on keyboard for clicking. The design was kept as compact as possible, so it can be placed neatly next to my keyboard (I place it above the right hand side, to use with my fingers).
+I did add 3 buttons to the device, so it is usable as a stand-alone trackball as well. However, the original choc version is not very ergonomical for that purpose, the switches sit too low relative to the ball to be comfortable. Hence I now also made an MX version, which puts the keycaps in a more comfortable position, higher relative to the ball. 
 
 ![](https://github.com/Wimads/TB3S/blob/main/images/PXL_20240108_225531608.jpg)
 
@@ -19,15 +20,19 @@ You need the following parts for the build:
 * 1x Tindie PMW3360 pcb
 * 34mm trackball (perixx sells them; you could also repurpose one from a logitech M575 or MX ergo).
 * 3x 3mm ceramic balls (Zirconium Oxide or Silicon Nitride are the best options); aliexpress is your best bet.
-* 3x Kailh Choc switch
-* 3x Choc keycap (compatible with choc spacing: ~18x17mm)
+* 3x switch (both an MX and a choc-v1 version available)
+* 3x keycap - note that choc version is choc spaced (ie. 17x18mm keycaps); MX version is MX spaced (19x19mm keycaps).
 * 2x heat set insert, M3x5x5mm
 * 2x countersunk screws, M3x10mm
 * Some wiring and solder
 * Some cellrubber tape (epdm or neoprene) for anti slip.
-* 3D printed housing (designed for MJF, not recommended for FDM printing)
-  * TB3S_Housing Top_231214.stl
-  * TB3S_Housing Bottom_231214.stl
+* 3D printed housing - designed for MJF printing; FDM printing is possible, but top housing will require being smart about support settings.
+  * For MX version use:
+    * TB3S-MX_v1.0 - Housing Top.stl
+    * TB3S-MX_v1.0 - Housing Bottom.stl
+  * For choc-v1 version use:
+    * TB3S_Housing Top_231214.stl
+    * TB3S_Housing Bottom_231214.stl
 
 ![](https://github.com/Wimads/TB3S/blob/main/images/IMG_20231214_184359_805.jpg)
 
